@@ -1,7 +1,6 @@
 import pygame as pg
 from player import Player
-from enemy1 import Enemy1
-adfs
+from enemy1 import Enemy1   
 class Game: 
     def __init__(self):
         pg.init()
