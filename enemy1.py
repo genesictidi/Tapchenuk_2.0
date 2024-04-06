@@ -16,7 +16,7 @@ class Enemy1:
 
     def move(self):                         
         if self.x > self.target_x:
-            self.x -= 5
+            self.x -= 10
         else:
             self.x += 700
         

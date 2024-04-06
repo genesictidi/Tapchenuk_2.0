@@ -26,7 +26,7 @@ class Game:
     def move(self):
         for event in pg.event.get():
             if event.type == pg.QUIT:
-                pg.quit()
+                pg.quit() 
         
         keys_pressed = pg.key.get_pressed()
         self.player.move(keys_pressed)
