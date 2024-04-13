@@ -4,8 +4,8 @@ from enemy1 import Enemy1
 class Game: 
     def __init__(self):
         pg.init()
-        self.screen = pg.display.set_mode((500,250))
-        self.back_surf = pg.image.load('sources/background.jpg')
+        self.screen = pg.display.set_mode((1000,800))
+        self.back_surf = pg.image.load('sources/background.png')
         self.clock = pg.time.Clock()
         self.player = Player(self.screen)
         self.enemy1 = Enemy1(self.screen)
@@ -34,7 +34,7 @@ class Game:
 
     def update(self):
         pg.display.update()
-        self.is_game = not self.player.me.colliderect(self.enemy1.enemy_rect)
+
 
 game = Game()
 game.game()

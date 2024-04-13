@@ -4,8 +4,8 @@ from player import Player
 class Enemy1:
     def __init__(self, screen):
         self.screen = screen
-        self.x = 475
-        self.y = 200
+        self.x = 700
+        self.y = 130
         self.target_x = 25
         self.target_y = 200
         self.player = Player(self.screen)

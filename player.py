@@ -3,14 +3,20 @@ import pygame as pg
 class Player:
     def __init__(self, screen):
         self.screen = screen
-        self.x = 250
-        self.y = 200
+        self.x = 350
+        self.y = 700
         self.me = None
         self.jump = True
         self.jump_size = 7
         
     def draw(self):
-        self.me = pg.draw.circle(self.screen, 'black', (self.x, self.y), 25)
+        player_surf = pg.image.load('sources/dino.png').convert_alpha()
+
+        scale = pg.transform.scale(
+                player_surf, (player_surf.get_width() // 6,
+                    player_surf.get_height() // 6))
+        scale_rect = scale.get_rect(center=(350, 130))
+        self.screen.blit(scale, scale_rect)
 
     def move(self, keys):
         self.jump1(keys)
