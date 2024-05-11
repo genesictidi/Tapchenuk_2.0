@@ -28,8 +28,8 @@ class Game:
         self.enemy1.draw()
         f1 = pg.font.Font(None, 36)
         text1 = f1.render(str(self.score), True,
-                  (180, 0, 0))
-        self.screen.blit(text1, (300, 100))
+                  (0, 0, 0))
+        self.screen.blit(text1, (530, 20))
 
     def move(self):
         for event in pg.event.get():
